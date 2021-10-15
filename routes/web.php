@@ -73,3 +73,80 @@ Route::get('pesan/{makanan?}/{minuman?}/{cemilan?}', function ($makanan = null,$
 
     return "$sa";
 });
+
+Route::get('profile', function () {
+    $nama ="Aldi";
+    return view('profile', compact('nama'));
+});
+
+Route::get('biodata2', function () {
+    $nama ="Aldi";
+    $umur = "18";
+    $alamat = "Jl.Cangkuang wetan";
+    $sekolah = "SMK Assalaam Bandung";
+    $kelas = "XII RPL 2";
+    $hobi = "Menonton,Workout";
+    return view('biodata2', compact('nama','umur','alamat','sekolah','kelas','hobi'));
+});
+
+Route::get('blog', function () {
+    $posts = [
+        ['id' => 1, 'title' => 'Lorem Ipsum 1', 'content' => 'Content Pertama'],
+        ['id' => 2, 'title' => 'Lorem Ipsum 2', 'content' => 'Content Kedua'],
+        ['id' => 3, 'title' => 'Lorem Ipsum 3', 'content' => 'Content Ketiga'],
+    ];
+    return view('blog', compact('posts'));
+});
+
+
+Route::get('data', function () {
+    $posts = [
+        [
+            'id' => 1, 'name' => 'Aldi Awaludin', 'username' => 'Aldi_2525' ,'email' => 'aldiawal12@gmail.com',
+         'alamat' => 'Bandung', 'mapel' => [
+             ['mapelar' => "Bahasa Indonesia"],
+             ['mapelar' => "Bahasa Inggris"],
+             ['mapelar' => "Bahasa Rusia"]
+          ]
+        ],
+
+        [
+            'id' => 2, 'name' => 'Sugaring', 'username' => 'sugaring' ,'email' => 'sugaring123@gmail.com',
+         'alamat' => 'Bandung', 'mapel' => [
+             ['mapelar' => "Bahasa Indonesia"],
+             ['mapelar' => "Bahasa Inggris"],
+             ['mapelar' => "Bahasa Rusia"]
+          ]
+        ],
+
+        [
+            'id' => 3, 'name' => 'Adeng', 'username' => 'Adeng2' ,'email' => 'adeng234@gmail.com',
+         'alamat' => 'Bandung', 'mapel' => [
+             ['mapelar' => "Bahasa Indonesia"],
+             ['mapelar' => "Bahasa Inggris"],
+             ['mapelar' => "Bahasa Rusia"]
+          ]
+        ],
+
+        [
+            'id' => 4, 'name' => 'Asep jepret', 'username' => 'Asep_jep' ,'email' => 'asepjejep12@gmail.com',
+         'alamat' => 'Bandung', 'mapel' => [
+             ['mapelar' => "Bahasa Indonesia"],
+             ['mapelar' => "Bahasa Inggris"],
+             ['mapelar' => "Bahasa Rusia"]
+          ]
+        ],
+
+        [
+            'id' => 5, 'name' => 'Isur Isbek', 'username' => 'isuranbek' ,'email' => 'isurisbek2345@gmail.com',
+         'alamat' => 'Bandung', 'mapel' => [
+             ['mapelar' => "Bahasa Indonesia"],
+             ['mapelar' => "Bahasa Inggris"],
+             ['mapelar' => "Bahasa Rusia"]
+          ]
+        ],
+
+    ];
+
+    return view('user', compact('posts'));
+});
