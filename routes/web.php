@@ -150,3 +150,13 @@ Route::get('data', function () {
 
     return view('user', compact('posts'));
 });
+
+Route::get('/testmodel', function() {
+$query =  App\Models\Post::all();
+return $query;
+});
+
+
+Route::get('/about2', function() {
+return view('about2');
+});
