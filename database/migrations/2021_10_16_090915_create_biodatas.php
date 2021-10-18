@@ -33,6 +33,6 @@ class CreateBiodatas extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('biodata');
+     Schema::dropIfExists('biodata');
     }
 }
