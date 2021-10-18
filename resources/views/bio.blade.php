@@ -9,7 +9,7 @@
                 <h2>{{$item->name}}</h2>
                 <p>{{$item->bornDate}}</p>
                 <p>{{$item->gender}}</p>
-                <p>{{$item->address}}</p>
+                <p>{{$item->anddress}}</p>
                 <p>{{$item->religion}}</p>
                 <p>{{$item->age}}</p>
                 <p>{{$item->hobby}}</p>
