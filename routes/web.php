@@ -1,5 +1,11 @@
 <?php
 
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\PesananController;
+use App\Http\Controllers\BarangController;
+use App\Http\Controllers\PembelianController;
+use App\Http\Controllers\PembeliController;
+use App\Http\Controllers\SuplierController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -175,3 +181,39 @@ Route::get('/bio', function() {
 $query =  App\Models\Biodata::all();
 return view('bio', compact('query'));
 });
+
+Route::get('/postcontrol', [PostController::class, 'index']);
+
+Route::get('/barang', function() {
+$query =  App\Models\Barang::all();
+return view('barang', compact('query'));
+});
+Route::get('/barangcontrol', [BarangController::class, 'barang']);
+
+Route::get('/pesanan', function() {
+$query =  App\Models\Pesanan::all();
+return view('pesanan', compact('query'));
+});
+
+Route::get('/pesanancontrol', [PesananController::class, 'pesanan']);
+
+Route::get('/pembelian', function() {
+$query =  App\Models\Pembelian::all();
+return view('pembelian', compact('query'));
+});
+
+Route::get('/pembeliancontrol', [PembelianController::class, 'pembelian']);
+
+Route::get('/pembeli', function() {
+$query =  App\Models\Pembeli::all();
+return view('pembeli', compact('query'));
+});
+
+Route::get('/pembelicontrol', [PembeliController::class, 'pembeli']);
+
+Route::get('/suplier', function() {
+$query =  App\Models\Suplier::all();
+return view('suplier', compact('query'));
+});
+
+Route::get('/supliercontrol', [SuplierController::class, 'suplier']);
